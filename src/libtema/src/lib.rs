@@ -12,7 +12,7 @@ use anyhow::Result;
 static DATA_DIR: Lazy<PathBuf> = Lazy::new(|| { PathBuf::from(shellexpand::env("$XDG_DATA_HOME/current_theme.tema").unwrap().to_string()) }); 
 static BASE_DIR: Lazy<PathBuf> = Lazy::new(|| { PathBuf::from(shellexpand::env("$XDG_CONFIG_HOME/tema/").unwrap().to_string()) });
 static THEMES_DIR: Lazy<PathBuf> = Lazy::new(|| { BASE_DIR.join("themes") });
-static CONFIG_FILE: Lazy<PathBuf> = Lazy::new(|| { BASE_DIR.join("tema").with_extension("yaml") });
+static CONFIG_FILE: Lazy<PathBuf> = Lazy::new(|| { BASE_DIR.join("config").with_extension("yaml") });
 
 #[derive(Serialize, Deserialize)]
 pub struct Tema {
