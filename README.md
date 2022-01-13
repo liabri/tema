@@ -9,10 +9,10 @@ As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/config.yaml` 
 ### what is a module ?
 Modules are found at `$XDG_CONFIG_HOME/tema/themes/{theme_name}/{module_name}` and contain the relevant files for the application theme.
 
-eg.
-`module.name`: ‎ ‎ ‎ ‎name of module, generally the application it will affect ‎ ‎ ‎ ‎ ‎ ‎(eg. wallpaper)\
-`module.path`: ‎ ‎ ‎ ‎the directory the respective file·s should be copied to ‎ ‎ ‎ ‎ ‎ ‎ ‎(eg. \~/wallpapers)\
-`module.command`: ‎a complementary command to be run when the module is changed ‎ ‎(eg. swaybg -i \~/wallpapers/wp.jpg)\
+eg.\
+`module.name`: name of module, generally the application it will affect (eg. wallpaper)\
+`module.path`: the directory the respective file·s should be copied to (eg. \~/wallpapers)\
+`module.command`: a complementary command to be run when the module is changed (eg. swaybg -i \~/wallpapers/wp.jpg)
 
 ### what is a command ?
 A command is well, a command; but, it may be run on specific events. 
