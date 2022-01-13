@@ -1,18 +1,18 @@
 # tema
-A theme manager for \*nix systems respecting the FHS spec  
+A theme manager for \*nix systems respecting the [FHS spec](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
 
 ## configuration
 As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/tema.yaml`, consisting of
-1. a list of modules, [What is a module ?](#what-is-a-module-?);
-2. a list of commands, [What is a command ?](#what-is-a-command-?).
+1. a list of modules [What is a module ?](#what-is-a-module-?);
+2. a list of commands [What is a command ?](#what-is-a-command-?).
 
 ### what is a module ?
 Modules are found at `$XDG_CONFIG_HOME/tema/themes/{theme_name}/{module_name}` and contain the relevant files for the theme.
 
 eg. Module {
 	name: name of module, generally the application it will affect			(eg. wallpaper) 
-	path: the directory the respective file·s should be copied to 			(eg. $XDG_PICTURES_DIR/wallpapers)
-	command: a complementary command to be run when the module is changed	(eg. swagbg -i $XDG_PICTURES_DIR/wallpapers/{name_of_wallpaper}.jpg)
+	path: the directory the respective file·s should be copied to 			(eg. \~/wallpapers)
+	command: a complementary command to be run when the module is changed	(eg. swaybg -i \~/wallpapers/wp.jpg)
 }
 
 ### what is a command ?
