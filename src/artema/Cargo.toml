@@ -1,0 +1,9 @@
+[package]
+name = "artema"
+version = "0.1.0"
+authors = ["liabri"]
+edition = "2021"
+
+[dependencies]
+tema = { path = "../libtema" }
+structopt = "0.3.25"
