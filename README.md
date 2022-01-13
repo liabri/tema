@@ -2,18 +2,17 @@
 A theme manager for \*nix systems respecting the [FHS spec](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
 
 ## configuration
-As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/config.yaml` (of which an example is foun d in the repo), consisting of
+As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/config.yaml` (of which an example is found in the repo), consisting of
 1. a list of modules [What is a module ?](#what-is-a-module-?);
 2. a list of commands [What is a command ?](#what-is-a-command-?).
 
 ### what is a module ?
-Modules are found at `$XDG_CONFIG_HOME/tema/themes/{theme_name}/{module_name}` and contain the relevant files for the theme.
+Modules are found at `$XDG_CONFIG_HOME/tema/themes/{theme_name}/{module_name}` and contain the relevant files for the application theme.
 
-eg. Module {
-	name: name of module, generally the application it will affect			(eg. wallpaper) 
-	path: the directory the respective file·s should be copied to 			(eg. \~/wallpapers)
-	command: a complementary command to be run when the module is changed	(eg. swaybg -i \~/wallpapers/wp.jpg)
-}
+eg.
+`module.name`: ‎ ‎ ‎ ‎name of module, generally the application it will affect ‎ ‎ ‎ ‎ ‎ ‎(eg. wallpaper)\
+`module.path`: ‎ ‎ ‎ ‎the directory the respective file·s should be copied to ‎ ‎ ‎ ‎ ‎ ‎ ‎(eg. \~/wallpapers)\
+`module.command`: ‎a complementary command to be run when the module is changed ‎ ‎(eg. swaybg -i \~/wallpapers/wp.jpg)\
 
 ### what is a command ?
 A command is well, a command; but, it may be run on specific events. 
