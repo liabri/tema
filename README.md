@@ -2,7 +2,7 @@
 A theme manager for \*nix systems respecting the [FHS spec](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
 
 ## configuration
-As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/tema.yaml`, consisting of
+As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/config.yaml`, consisting of
 1. a list of modules [What is a module ?](#what-is-a-module-?);
 2. a list of commands [What is a command ?](#what-is-a-command-?).
 
