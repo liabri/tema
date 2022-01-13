@@ -2,8 +2,8 @@ mod utils;
 use utils::copy_dir_all;
 
 use serde::{ Serialize, Deserialize };
-use std::fs::{ File, OpenOptions, read_to_string };
-use std::io::{ BufReader, BufWriter, Write };
+use std::fs::{ File, read_to_string, read_dir };
+use std::io::{ BufReader, Write };
 use std::path::PathBuf;
 use std::process::Command;
 use once_cell::sync::Lazy;
@@ -74,18 +74,13 @@ impl Tema {
         let mut tema: Tema = serde_yaml::from_reader(reader)?;
 
         //read themes dir to get list of themes
-        let themes = std::fs::read_dir(&*THEMES_DIR)?;
+        let themes = read_dir(&*THEMES_DIR)?;
         tema.themes.extend(themes.map(|x| x.unwrap().path().file_name().unwrap().to_os_string().into_string().unwrap()));
         Ok(tema)
     }
 
     pub fn write(&self) -> Result<()> {
-        self.write_current_theme()?;
-        let file = OpenOptions::new().write(true).open(&*CONFIG_FILE)?;
-        let mut writer = BufWriter::new(file);
-        serde_yaml::to_writer(&mut writer, &self)?;
-        writer.flush()?;
-        Ok(())
+        Ok(self.write_current_theme()?)
     }
 
     // theme management
