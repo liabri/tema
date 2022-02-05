@@ -1,10 +1,10 @@
 # tema
-A theme manager for \*nix systems respecting the [FHS spec](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
+A theme manager for \*nix systems
 
 ## configuration
 As of now all the configuration is done via `$XDG_CONFIG_HOME/tema/config.yaml` (of which an example is found in the repo), consisting of
-1. a list of modules [What is a module ?](#what-is-a-module-?);
-2. a list of commands [What is a command ?](#what-is-a-command-?).
+1. a list of modules; [What is a module ?](#what-is-a-module-?)
+2. a list of commands. [What is a command ?](#what-is-a-command-?)
 
 ### what is a module ?
 Modules are found at `$XDG_CONFIG_HOME/tema/themes/{theme_name}/{module_name}` and contain the relevant files for the application theme.
