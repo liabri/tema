@@ -22,6 +22,3 @@ Currently implemented events:
 
 There are also variables as seen above, currently implemented variables:
 1. current_theme 	returns the currently enabled theme, stored at `$XDG_DATA_HOME/current_theme.tema`
-
-## notes
-- Currently command arguments containing whitespaces cannot be handled, even if they include quotation marks (")
